@@ -76,7 +76,7 @@ header {
     gap: 1.5rem;
 }
 
-#hero button {
+button, input[type="submit"] {
     border-radius: 3.125rem;
     background: #100808;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -214,4 +214,87 @@ li::marker {
     gap: 4rem;
     align-items: center;
     justify-content: center;
+}
+
+#formacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+}
+
+#formacao div {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+#formacao details summary {
+    font-family: Syne;
+    font-size: 1.5rem;
+}
+
+
+#formacao-dt ul li::marker {
+    content: "📚  ";
+    color: #000;
+    font-size: 1rem;
+}
+
+#experiencia-dt ul li::marker {
+    content: "💼  ";
+    color: #000;
+    font-size: 1rem;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+input {
+    border-radius: 1.5625rem;
+    background: #E2DDDD;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 1rem 2rem;
+    border: none;
+    width: 35rem;
+}
+
+textarea.custom-textarea {
+    border-radius: 1.5625rem;
+    background: #E2DDDD;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 1rem 2rem;
+    border: none;
+    width: 35rem;
+    height: 20rem;
+    resize: none; 
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    flex-direction: column;
+    background: #E2DDDD;
+    
+}
+
+footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;  
 }
