@@ -35,9 +35,10 @@
         </section>
         <section id="sobre-mim">
             <hr color="black" width="358px">
-            <h2>Sobre mim</h2>
+            <h2>Sobre mim | Objetivo</h2>
             <p>
-                Olá, sou Milena Limoeiro, apaixonada por tecnologia com 2 anos de experiência em desenvolvimento Backend Node.js e 1 ano em C# .NET. Além disso, tenho conhecimento em DevOps, Docker, Kubernetes e AWS, usando essas tecnologias para orquestrar, implantar e hospedar aplicativos na nuvem. Também tenho experiência no desenvolvimento Frontend com HTML5, CSS3, JavaScript e TypeScript. Estou sempre em busca de novos desafios e oportunidades para expandir meu conhecimento!
+                Olá, sou Milena Limoeiro, apaixonada por tecnologia com 2 anos de experiência em desenvolvimento Backend Node.js e 1 ano em C# .NET. Além disso, tenho conhecimento em DevOps, Docker, Kubernetes e AWS, usando essas tecnologias para orquestrar, implantar e hospedar aplicativos na nuvem. Também tenho experiência no desenvolvimento Frontend com HTML5, CSS3, JavaScript e TypeScript. 
+                Estou sempre em busca de novos desafios e oportunidades para expandir meu conhecimento!
             </p>
 
         </section>
@@ -171,6 +172,13 @@
                 </div>  
             </div>
         </section>
+        <section id="projetos">
+            <hr color="black" width="358px">
+            <h2>Projetos</h2>
+            <ul>
+                  
+            </ul>
+        </section>
         <section id="formacao">
             <hr color="black" width="358px">
             <h2>Formação</h2>
@@ -231,4 +239,24 @@
         <p>Feito com ❤️ por Milena Limoeiro</p>
     </footer>
 </body>
+<script>
+    function getApiData() {
+        fetch('https://api.github.com/users/Konstructa/repos')
+        .then(response => response.json())
+        .then(data => {
+            data.map((repo) => {
+                const ul = document.querySelector('#projetos ul');
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = repo.html_url;
+                a.target = '_blank';
+                a.innerHTML = repo.name;
+                li.appendChild(a);
+                ul.appendChild(li);
+            })
+        })
+    }
+
+    getApiData();
+</script>
 </html>
