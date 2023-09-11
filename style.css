@@ -181,7 +181,7 @@ button, input[type="submit"] {
 .skill-card ul {
     display: flex;
     flex-flow: row wrap;
-    margin-left: 25%;
+    margin-left: 15%;
 }
 
 .skill-card ul li {
