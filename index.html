@@ -220,9 +220,11 @@
                 <input type="text" id="empresa" name="empresa" placeholder="Empresa">
                 <input type="email" id="email" name="email" placeholder="Email">
                 <input type="text" id="assunto" name="name" placeholder="Assunto">
-                <textarea class="custom-textarea" rows="4" cols="50" placeholder="Mensagem"></textarea>
-                <input type="submit" value="Enviar">
-                <button style="background-color: red;">Cancelar</button>
+                <textarea class="custom-textarea" rows="4" cols="50" placeholder="Mensagem" maxlength="500"></textarea>
+                <div id="buttons">
+                    <button style="background-color: red;">Cancelar</button>
+                    <input type="submit" value="Enviar" style="max-width: 10rem;">
+                </div>
               </form> 
         </section>
     </main>
